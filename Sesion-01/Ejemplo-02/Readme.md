@@ -1,28 +1,69 @@
+##      EJEMPLO 2. Matrices
+##### Crear Matrices. Como se lee -> m[fila, columna]
+```R
+m <- matrix(1:9, nrow = 3, ncol = 3)
+m
+```
+#### Extrayendo la primera entrada
+``` RR
+m[1,1]
+```
 
-agrega el programa que se desarrollara con backticks> [agrega la sesion con backticks]
+#### Extrayendo la primer columna, con todas sus filas
+```R
+m[ ,1]
+```
+#### ¿Qué sucede si se suma un vector y una matriz?
+```R
+sum.vecmat <- c(1,2) + m
+```
 
-## Titulo del Ejemplo
+#### Creando otra matriz
+```R
+n <- matrix(2:7, 4, 6)
+```
+#### Podemos conocer la dimensión de la matriz así 
+```R
+dim(n)
+```
 
-### OBJETIVO
+#### Extrayendo subconjuntos de la matriz
+```R
+n[n > 4] 
+```
 
-- Lo que esperamos que el alumno aprenda
+#### Ahora veremos como localizar la posición de las entradas anteriores
+```R
+which(n > 4)
+```
 
-#### REQUISITOS
+#### Uniendo Vectores para formar una matriz
+```R
+a <- 2:6
+b <- 5:9
+```
+#### Construyendo la matriz utilizando el comando cbind(), para unirlos por culumna
+```R
+cbind(a,b)
+```
 
-1. Lo necesario para desarrollar el ejemplo o el Reto
+#### Construyendo la matriz utilizando el comando rbind(), para unirlos por fila
+```R
+rbind(a,b)
+```
+#### Aplicando una función a una fila o columna de una matriz (mean, sort) 
+```R
+apply(n, 2, mean)
 
-#### DESARROLLO
+apply(n, 2, sort)
+```
 
-Agrega las instrucciones generales del ejemplo o reto
-
-<details>
-	<summary>Solucion</summary>
-        <p> Agrega aqui la solucion</p>
-        <p>Recuerda! escribe cada paso para desarrollar la solución del ejemplo o reto </p>
-</details>
-
-Agrega una imagen dentro del ejemplo o reto para dar una mejor experiencia al alumno (Es forzoso que agregages al menos una) 
-
-![imagen](https://picsum.photos/200/300)
-
-
+####   Algunas operaciones básicas de matrices 
+   - 1. Producto matricial: A %*% B
+   - 2. Producto elemento a elemento: A*B
+   - 3. Traspuesta: t(A)  
+   - 4. Determinante: det(A)
+   - 5. Extraer la diagonal: diag(A)
+   - 6. Resolver un sistema de ecuaciones lineales (\( Ax=b \)): solve(A,b)
+   - 7. Inversa: solve(A)
+   - 8. Autovalores y autovectores: eigen(A)
