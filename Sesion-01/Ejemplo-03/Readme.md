@@ -1,28 +1,60 @@
+# Ejemplo 3. Listas y data frames
+#### Listas 
+```R
+milista <- list(nombre = "Pepe", no.hijos = 3, edades.hijos = c(4, 7, 9))
+```
 
-agrega el programa que se desarrollara con backticks> [agrega la sesion con backticks]
+#propiedades de la lista
+```R
+str(milista)
+```
+#### Extrayendo elementos de la lista
+```
+milista$nombre
+```
 
-## Titulo del Ejemplo
+###DATA FRAMES
+```R
+x <- 6:8
+y <- c("A", "B", "C")
+mifile <- data.frame(edad = x, grupo = y)
+mifile
 
-### OBJETIVO
+str(mifile)
+```
 
-- Lo que esperamos que el alumno aprenda
+#### Extrayendo información del df, se hace igual que con las matrices
+```R
+mifile[1]
+mifile[,1]
+mifile$edad
+```
+#### Calculando algunos estadísticos básicos
+```R
+mean(mifile$edad)
+```
 
-#### REQUISITOS
+#### Podemos hacer uso de la función paste() para agregar un mensaje
+```R
+paste("La media de la edad es:", mean(mifile$edad))
+```
 
-1. Lo necesario para desarrollar el ejemplo o el Reto
+#### Podemos inspeccionar a detalle el df utilizando summary()
+```R
+summary(mifile)
+```
+#### También se puede conocer su dimensión 
+```R
+dim(mifile)
+```
+#### Podemos agregar una columna extra con datos 
+```RR
+mifile$sexo <- c("H", "M", "H")
+mifile
+```
 
-#### DESARROLLO
-
-Agrega las instrucciones generales del ejemplo o reto
-
-<details>
-	<summary>Solucion</summary>
-        <p> Agrega aqui la solucion</p>
-        <p>Recuerda! escribe cada paso para desarrollar la solución del ejemplo o reto </p>
-</details>
-
-Agrega una imagen dentro del ejemplo o reto para dar una mejor experiencia al alumno (Es forzoso que agregages al menos una) 
-
-![imagen](https://picsum.photos/200/300)
-
-
+#### Si fuera el caso, se puede eliminar una columna 
+```R
+mifile$sexo <- NULL
+mifile
+```
