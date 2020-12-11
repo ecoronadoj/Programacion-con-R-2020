@@ -13,7 +13,7 @@
 Ejecutar las líneas de comando y tratar de comprender que realiza cada parte de sus entradas
 
 #### Se pueden obtener diversos data sets de Kaggle, visita el sitio para que te familiarices
-#### La siguiente es ua base de datos de los libros más vendidos en Amazon del 2009 - 2019
+#### La siguiente es una base de datos de los libros más vendidos en Amazon del 2009 - 2019
 
 Obtenemos la ruta del directorio de trabajo
 ```R
